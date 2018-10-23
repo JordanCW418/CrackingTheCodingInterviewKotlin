@@ -1,14 +1,14 @@
 package arraysAndStrings
 
 /**
-        Problem:
-        Implement an algorithm to determine if a string has all unique characters.
-        What if you cannot use additional data structures?
-        */
+  * Problem: 1.1
+  * Implement an algorithm to determine if a string has all unique characters.
+  * What if you cannot use additional data structures?
+  */
 
+//TODO add more test cases maybe try to do unit tests?
 fun main(args : Array<String>){
-    println(isUnique("abc"))
-    println(isUnique("aabcs"))
+    testCases.forEach { string -> println(isUnique(string)) }
 }
 
 fun isUnique(str : String): Boolean {
@@ -29,3 +29,11 @@ fun isUnique(str : String): Boolean {
     }
     return true
 }
+
+/**
+  * Test Cases
+  */
+private val testCases = arrayOf(
+        "abc",
+        "aabcs"
+)
