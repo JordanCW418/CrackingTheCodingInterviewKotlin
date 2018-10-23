@@ -1,7 +1,7 @@
 package arraysAndStrings
 
 /**
- * Problem:
+ * Problem: 1.2
  * Given two Strings, write a method to decide if one is a permutation of the other
  */
 fun main(args : Array<String>){
@@ -49,7 +49,7 @@ fun isPermutation2(str1 : String, str2: String) : Boolean{
 /**
   * Test Cases
   */
-val testCases = arrayOf(
+private val testCases = arrayOf(
         "abc cba",
         "abc cbaa",
         "aabc cbaa"
