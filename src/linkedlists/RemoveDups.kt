@@ -8,15 +8,14 @@ fun main(args : Array<String>){
     var testCaseNum = 1
     testCases.forEach { case ->
         println("Test Case: ${testCaseNum++}")
-        printList(case)
+        case?.printList()
         println()
         mapOfFoundIntegers = HashSet()
-        removeDuplicatesFromLinkedList(Node(0, case))
-        printList(case)
+        findKthToLastElement(Node(0, case))
+        case?.printList()
         println("\n------------------------")
     }
 }
-
 
 private fun removeDuplicatesFromLinkedList(previousNode: Node?){
     var prev = previousNode
@@ -29,20 +28,12 @@ private fun removeDuplicatesFromLinkedList(previousNode: Node?){
             mapOfFoundIntegers.add(current.value)
             prev = prev.next
         }
-        removeDuplicatesFromLinkedList(prev)
+        findKthToLastElement(prev)
     }
 }
 
 private fun removeCurrentNodeFromList(prev: Node){
     prev.next = prev.next?.next
-}
-
-
-private fun printList(node: Node?){
-    node?.let {
-        print("${node.value} -> ")
-        printList(node.next)
-    }
 }
 
 
