@@ -6,7 +6,6 @@ package arraysAndStrings
   * What if you cannot use additional data structures?
   */
 
-//TODO add more test cases maybe try to do unit tests?
 fun main(args : Array<String>){
     testCases.forEach { string -> println(isUnique(string)) }
 }
